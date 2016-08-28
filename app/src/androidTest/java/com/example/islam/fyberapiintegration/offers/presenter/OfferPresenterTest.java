@@ -61,11 +61,20 @@ public class OfferPresenterTest {
         offerPresenter.loadOffers(null);
     }
     @Test
-    public void testWhenloadWeatherForecastsCompleted_weatherViewHideProgressISCalled()  {
+    public void testWhenloadoffersCompleted_offerViewHideProgressISCalled()  {
         doNothing().when(offersView).showProgress();
         when(offersBussiness.getOffersParamString(null)).thenReturn(Observable.create((Observable.OnSubscribe<String>) sub -> {
             sub.onCompleted();
             verify(offersView, times(1)).hideProgress();
+        }));
+        offerPresenter.loadOffers(null);
+    }
+    @Test
+    public void testWhenloadOffersCompleted_offerBussinessGetOffersIsCalled()  {
+        doNothing().when(offersView).showProgress();
+        when(offersBussiness.getOffersParamString(null)).thenReturn(Observable.create((Observable.OnSubscribe<String>) sub -> {
+            sub.onCompleted();
+            verify(offersBussiness, times(1)).getOffers(null);
         }));
         offerPresenter.loadOffers(null);
     }
