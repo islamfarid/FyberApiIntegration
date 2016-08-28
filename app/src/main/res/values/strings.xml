@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FyberApiIntegration</string>
+    <string name="uid_api_param">uid</string>
+    <string name="api_key_api_param">API Key</string>
+    <string name="app_id_api_param">appid</string>
+    <string name="pub0_api_param">pub0</string>
+    <string name="get_offers_param">Get Offers</string>
+    <string name="uid_sample">spiderman</string>
+    <string name="api_key_sample">1c915e3b5d42d05136185030892fbb846c278927</string>
+    <string name="app_id_sample">2070</string>
+    <string name="offers_integrated_successfully">offers Api Integration Success</string>
+    <string name="error_general">Opps , some thing went wrong</string>
+    <string name="error_general_internet">Internet problem , please check your internet connection</string>
+    <string name="no_offers_found">there is no offers found</string>
+
+</resources>
